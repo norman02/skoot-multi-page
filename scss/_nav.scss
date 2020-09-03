@@ -1,9 +1,43 @@
-.nav-bar {
-    z-index: 2;
+nav {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
     width: 100vw;
     background-color: $background-color;
-    position: fixed;
-    padding: 2.4rem;
-}
+    align-items: center;
+    justify-content: center;
+
+    .menu-btn {
+        position: absolute;
+        left: 1rem;
+        height: 20px;
+        width: 28px;
+        cursor: pointer;
+        @include transition-ease;
+
+        &__burger {
+            position: absolute;
+            width: 28px;
+            height: 3px;
+            background: $primary-color;
+        }
+    }
+    
+    .img-logo {
+        background: no-repeat center url('../assets/logo.svg');
+        width: 8rem;
+        height: 4rem;
+    }
+
+    .nav-list {
+        display: none;
+        
+    }
+}   
+
+
+    
 
 
