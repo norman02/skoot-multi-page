@@ -1,0 +1,11 @@
+
+body {
+    font-family: $primary-font;
+    font-size: 1.5rem;
+    background-color: $background-color;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+    color: inherit;
+}
