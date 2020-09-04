@@ -9,6 +9,7 @@ nav {
     background-color: $background-color;
     align-items: center;
     justify-content: center;
+}
 
     .menu-btn {
         position: absolute;
@@ -66,39 +67,51 @@ nav {
         height: 4rem;
     }
 
-    .nav-list {    
-        visibility: hidden;
-        position: absolute;
-        overflow: hidden;
+
+    .nav {
+        position: fixed;
         top: 6rem;
         left: 0;
-        width: 75vw;
-        height: 100vh;
-        background-color: $secondary-color;
-        color: set-text-color($secondary-color);
-        opacity: 98%;  
-        padding: 7.5rem 0 0 3rem;
-
-        a {
-            font-family: $secondary-font;
-            font-weight: 700;
-            font-size: 1.8rem;
-            line-height: 2.5;
-        }
+        width: 100vw;
+        opacity: 0.98;
+        visibility: hidden;
+      
         &.open {
-            visibility: visible;
-        
-    }
-    
-    }
-
-    button{
-        position: fixed;
-        bottom: 2rem;
-        
-    }
-}   
-
+          visibility: visible;
+        }
+      
+        .menu-nav {
+          display: flex;
+          flex-flow: column wrap;
+          height: 100vh;
+          overflow: hidden;
+          background: $secondary-color;
+          padding-top: 6rem;
+          padding-left: 2rem;
+          transform: translateX(-100vw);
+          @include transition-ease;
+      
+          &.open {
+            transform: translateX(0);
+          }
+      
+          &__item {
+            transform: translateX(100vw);
+            @include transition-ease;
+      
+            &.open {
+             transform: translateX(0); 
+            }
+          }
+      
+        }
+      }
+      
+      @for $i from 1 through 4 {
+        .menu-nav__item:nth-child(#{$i}) {
+          transition-delay: ($i * 0.1s) + 0.15s;
+        }
+      }
 
     
 
