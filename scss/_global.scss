@@ -28,7 +28,7 @@ button {
     &:hover {
         @include transition-ease;
         background-color: white;
-        color: black;
-        border: 1px solid black;
+        color: $primary-color;
+        border: 12px solid $primary-color;
     }
 }

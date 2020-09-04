@@ -42,8 +42,22 @@ nav {
                 height: 3px;
                 background: $primary-color;
                 @include transition-ease;
-            }
+            }  
+            &.open {
+                transform: rotate(720deg);
+                background: transparent;
+
+                &::before {
+                    transform: rotate(45deg) translate(5px, 8px);
+                }
+
+                &::after {
+                    transform: rotate(-45deg) translate(3px, -7px);
+                }
+            }         
         }
+
+        
     }
     
     .img-logo {
@@ -52,8 +66,10 @@ nav {
         height: 4rem;
     }
 
-    .nav-list {
+    .nav-list {    
+        visibility: hidden;
         position: absolute;
+        overflow: hidden;
         top: 6rem;
         left: 0;
         width: 75vw;
@@ -69,6 +85,11 @@ nav {
             font-size: 1.8rem;
             line-height: 2.5;
         }
+        &.open {
+            visibility: visible;
+        
+    }
+    
     }
 
     button{

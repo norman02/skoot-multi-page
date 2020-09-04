@@ -87,8 +87,8 @@ button:hover {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   background-color: white;
-  color: black;
-  border: 1px solid black;
+  color: #FCB72B;
+  border: 12px solid #FCB72B;
 }
 
 nav {
@@ -150,6 +150,22 @@ nav .menu-btn__burger::after {
   transition: all 0.5s ease-in-out;
 }
 
+nav .menu-btn__burger.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background: transparent;
+}
+
+nav .menu-btn__burger.open::before {
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+}
+
+nav .menu-btn__burger.open::after {
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+}
+
 nav .img-logo {
   background: no-repeat center url("../assets/logo.svg");
   width: 8rem;
@@ -157,7 +173,9 @@ nav .img-logo {
 }
 
 nav .nav-list {
+  visibility: hidden;
   position: absolute;
+  overflow: hidden;
   top: 6rem;
   left: 0;
   width: 75vw;
@@ -173,6 +191,10 @@ nav .nav-list a {
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 2.5;
+}
+
+nav .nav-list.open {
+  visibility: visible;
 }
 
 nav button {
