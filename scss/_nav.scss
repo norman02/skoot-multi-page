@@ -19,9 +19,29 @@ nav {
 
         &__burger {
             position: absolute;
+            top: 0.5rem;
             width: 28px;
             height: 3px;
             background: $primary-color;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -8px;
+                width: 28px;
+                height: 3px;
+                background: $primary-color;
+                @include transition-ease;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 8px;
+                width: 28px;
+                height: 3px;
+                background: $primary-color;
+                @include transition-ease;
+            }
         }
     }
     

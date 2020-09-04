@@ -95,9 +95,32 @@ nav .menu-btn {
 
 nav .menu-btn__burger {
   position: absolute;
+  top: 0.5rem;
   width: 28px;
   height: 3px;
   background: #FCB72B;
+}
+
+nav .menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background: #FCB72B;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+nav .menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 28px;
+  height: 3px;
+  background: #FCB72B;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 nav .img-logo {
