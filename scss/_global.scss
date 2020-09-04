@@ -9,3 +9,26 @@ a, a:visited, a:active {
     text-decoration: none;
     color: inherit;
 }
+
+a:hover {
+    color: $primary-color;
+    @include transition-ease;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: $primary-color;
+    font-family: $secondary-font;
+    font-weight: 700;
+    color: white;
+    width: 192px;
+    height: 53px;
+
+    &:hover {
+        @include transition-ease;
+        background-color: white;
+        color: $primary-color;
+        border: 12px solid $primary-color;
+    }
+}

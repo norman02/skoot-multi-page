@@ -3,6 +3,7 @@
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -65,11 +66,139 @@ a, a:visited, a:active {
   color: inherit;
 }
 
-.nav-bar {
-  z-index: 2;
-  width: 100vw;
-  background-color: #fff;
+a:hover {
+  color: #FCB72B;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: #FCB72B;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: white;
+  width: 192px;
+  height: 53px;
+}
+
+button:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  background-color: white;
+  color: #FCB72B;
+  border: 12px solid #FCB72B;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: fixed;
-  padding: 2.4rem;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 6rem;
+  background-color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .menu-btn {
+  position: absolute;
+  left: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+nav .menu-btn__burger {
+  position: absolute;
+  top: 0.5rem;
+  width: 28px;
+  height: 3px;
+  background: #FCB72B;
+}
+
+nav .menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background: #FCB72B;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+nav .menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 28px;
+  height: 3px;
+  background: #FCB72B;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+nav .menu-btn__burger.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background: transparent;
+}
+
+nav .menu-btn__burger.open::before {
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+}
+
+nav .menu-btn__burger.open::after {
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+}
+
+nav .img-logo {
+  background: no-repeat center url("../assets/logo.svg");
+  width: 8rem;
+  height: 4rem;
+}
+
+nav .nav-list {
+  visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  top: 6rem;
+  left: 0;
+  width: 75vw;
+  height: 100vh;
+  background-color: #333A44;
+  color: #fff;
+  opacity: 98%;
+  padding: 7.5rem 0 0 3rem;
+}
+
+nav .nav-list a {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 2.5;
+}
+
+nav .nav-list.open {
+  visibility: visible;
+}
+
+nav button {
+  position: fixed;
+  bottom: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
