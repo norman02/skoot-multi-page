@@ -7,6 +7,8 @@ nav {
     width: 100vw;
     height: 6rem;
     background-color: $background-color;
+    color: white;
+    line-height: 3;
     align-items: center;
     justify-content: center;
 }
@@ -84,12 +86,18 @@ nav {
           display: flex;
           flex-flow: column wrap;
           height: 100vh;
+          width: 70vw;
           overflow: hidden;
           background: $secondary-color;
           padding-top: 6rem;
           padding-left: 2rem;
           transform: translateX(-100vw);
-          @include transition-ease;
+          @include transition-ease; 
+          
+          button {
+            position: absolute;
+            bottom: 15rem;
+          }
       
           &.open {
             transform: translateX(0);
@@ -105,13 +113,14 @@ nav {
           }
       
         }
-      }
-      
-      @for $i from 1 through 4 {
-        .menu-nav__item:nth-child(#{$i}) {
-          transition-delay: ($i * 0.1s) + 0.15s;
+        @for $i from 1 through 4 {
+          .menu-nav__item:nth-child(#{$i}) {
+            transition-delay: ($i * 0.1s) + 0.15s;
+          }
         }
       }
+      
+      
 
     
 

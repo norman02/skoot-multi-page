@@ -102,6 +102,8 @@ nav {
   width: 100vw;
   height: 6rem;
   background-color: #fff;
+  color: white;
+  line-height: 3;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -194,6 +196,7 @@ nav {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   height: 100vh;
+  width: 70vw;
   overflow: hidden;
   background: #333A44;
   padding-top: 6rem;
@@ -202,6 +205,11 @@ nav {
           transform: translateX(-100vw);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+}
+
+.nav .menu-nav button {
+  position: absolute;
+  bottom: 15rem;
 }
 
 .nav .menu-nav.open {
@@ -221,22 +229,22 @@ nav {
           transform: translateX(0);
 }
 
-.menu-nav__item:nth-child(1) {
+.nav .menu-nav__item:nth-child(1) {
   -webkit-transition-delay: 0.25s;
           transition-delay: 0.25s;
 }
 
-.menu-nav__item:nth-child(2) {
+.nav .menu-nav__item:nth-child(2) {
   -webkit-transition-delay: 0.35s;
           transition-delay: 0.35s;
 }
 
-.menu-nav__item:nth-child(3) {
+.nav .menu-nav__item:nth-child(3) {
   -webkit-transition-delay: 0.45s;
           transition-delay: 0.45s;
 }
 
-.menu-nav__item:nth-child(4) {
+.nav .menu-nav__item:nth-child(4) {
   -webkit-transition-delay: 0.55s;
           transition-delay: 0.55s;
 }
