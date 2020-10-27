@@ -61,6 +61,10 @@ body {
   background-color: #fff;
 }
 
+header {
+  margin-top: 6rem;
+}
+
 a, a:visited, a:active {
   text-decoration: none;
   color: inherit;
@@ -247,5 +251,40 @@ nav {
 .nav .menu-nav__item:nth-child(4) {
   -webkit-transition-delay: 0.55s;
           transition-delay: 0.55s;
+}
+
+footer {
+  height: 100vh;
+  margin-top: 6rem;
+  color: white;
+  text-align: center;
+  background-color: #333A44;
+}
+
+footer .sign-up {
+  padding: 10rem 0 0 0;
+  background: #495567;
+}
+
+footer .sign-up h2 {
+  font-size: 2.6rem;
+}
+
+footer .sign-up .stores {
+  padding: 10rem 0;
+}
+
+footer .sign-up .stores .apple {
+  display: inline-block;
+  width: 10rem;
+  height: 4rem;
+  background: url("../assets/icons/app-store.svg") no-repeat;
+}
+
+footer .sign-up .stores .google {
+  display: inline-block;
+  width: 11rem;
+  height: 4rem;
+  background: url("../assets/icons/google-play.svg") no-repeat;
 }
 /*# sourceMappingURL=main.css.map */

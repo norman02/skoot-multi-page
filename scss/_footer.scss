@@ -1,0 +1,40 @@
+footer {
+    height: 100vh;
+    margin-top: 6rem;
+    color: white;
+    text-align: center;
+    background-color: $secondary-color;
+
+    .sign-up {
+        padding: 10rem 0 0 0;
+        background: $tertiary-color;
+
+        h2 {       
+            font-size: 2.6rem;
+        }
+
+        .stores {
+            padding: 10rem 0;
+
+            .apple {
+                display: inline-block;
+                width: 10rem;
+                height: 4rem;
+                background: url('../assets/icons/app-store.svg') no-repeat;
+            }
+            .google {
+                display: inline-block;
+                width: 11rem;
+                height: 4rem;
+                background: url('../assets/icons/google-play.svg') no-repeat;
+            }
+
+        }
+
+    }
+    
+    .menu {
+        
+        
+    }
+}
